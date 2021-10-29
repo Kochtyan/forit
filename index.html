@@ -2,6 +2,31 @@
 
 <html lang="en">
 <head>
+
+</script>
+    <style>
+        html, body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: darkslategray;
+            line-height: 150%;
+            color: #2C2C2C;
+        }
+    </style>
+</head>
+<body>
+    <div class="exercise exercise9">
+        <div class="task task1">
+            <h3>Cookie</h3>
+            <span id="welcomeText">Зарегистрируйтесь</span><br>
+            <span id="countText">Количество посещений этой страницы</span><br>
+            <span id="dateText">Вы ещё не были на этой странице</span><br><br>
+            <span>Введите имя</span><br>
+            <input type="text" id="nameCookie">
+            <button id="registrationButton">Зарегистроваться</button>
+            <button id="clearButton">Обнулить посещения</button>
+        </div>
+    </div>
+</body>
 <script LANGUAGE="JavaScript">
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
@@ -41,14 +66,20 @@
     const registrationButton = document.querySelector('#registrationButton');
     const clearButton = document.querySelector('#clearButton');
 
-
+    if (getCookie('name') === undefined) {
+        welcomeText.innerHTML = "Зарегистрируйтесь";
+    }
+    else {
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
 
     let count = getCookie('count');
     if (count === undefined) {
         count = 0
     }
 
-
+    setCookie('count', ++count);
+    countText.innerHTML = "Вы были на этой странице: " + getCookie('count') + " раз";
 
     if (getCookie('date') === undefined) {
         setCookie('date', new Date().getTime());
@@ -76,37 +107,4 @@
         setCookie('count', 0);
         countText.innerHTML = "Вы ещё не были на этой странице";
     })
-    if (getCookie('name') === undefined) {
-        welcomeText.innerHTML = "Зарегистрируйтесь";
-    }
-    else {
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
-    }
-
-    setCookie('count', ++count);
-    countText.innerHTML = "Вы были на этой странице: " + getCookie('count') + " раз";
-</script>
-    <style>
-        html, body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: darkslategray;
-            line-height: 150%;
-            color: #2C2C2C;
-        }
-    </style>
-</head>
-<body>
-    <div class="exercise exercise9">
-        <div class="task task1">
-            <h3>Cookie</h3>
-            <span id="welcomeText">Зарегистрируйтесь</span><br>
-            <span id="countText">Количество посещений этой страницы</span><br>
-            <span id="dateText">Вы ещё не были на этой странице</span><br><br>
-            <span>Введите имя</span><br>
-            <input type="text" id="nameCookie">
-            <button id="registrationButton">Зарегистроваться</button>
-            <button id="clearButton">Обнулить посещения</button>
-        </div>
-    </div>
-</body>
-</html>
+</html >
