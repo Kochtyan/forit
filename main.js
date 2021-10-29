@@ -37,10 +37,10 @@ const registrationButton = document.querySelector('#registrationButton');
 const clearButton = document.querySelector('#clearButton');
 
 if (getCookie('name') === undefined) {
-    welcomeText.innerHTML = "Зарегистрируйтесь";
+    welcomeText.innerHTML = "Р—Р°СЂРµРіРёСЃС‚СЂРёСЂСѓР№С‚РµСЃСЊ";
 }
 else {
-    welcomeText.innerHTML = "Привет, " + getCookie('name');
+    welcomeText.innerHTML = "РџСЂРёРІРµС‚, " + getCookie('name');
 }
 
 let count = getCookie('count');
@@ -49,7 +49,7 @@ if (count === undefined) {
 }
 
 setCookie('count', ++count);
-countText.innerHTML = "Вы были на этой странице: " + getCookie('count') + " раз";
+countText.innerHTML = "Р’С‹ Р±С‹Р»Рё РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ: " + getCookie('count') + " СЂР°Р·";
 
 if (getCookie('date') === undefined) {
     setCookie('date', new Date().getTime());
@@ -64,16 +64,16 @@ else {
     let hours = Math.floor(delay / (60 * 60 * 1000)) % 24;
     let minutes = Math.floor(delay / (60 * 1000)) % 60;
     let secunds = Math.floor(delay / 1000) % 60;
-    dateText.innerHTML = "Вы заходили на эту страницу: " + months + " месяцев " + days + " дней " + hours + " часов " + minutes + " минут " + secunds + " секунд назад";
+    dateText.innerHTML = "Р’С‹ Р·Р°С…РѕРґРёР»Рё РЅР° СЌС‚Сѓ СЃС‚СЂР°РЅРёС†Сѓ: " + months + " РјРµСЃСЏС†РµРІ " + days + " РґРЅРµР№ " + hours + " С‡Р°СЃРѕРІ " + minutes + " РјРёРЅСѓС‚ " + secunds + " СЃРµРєСѓРЅРґ РЅР°Р·Р°Рґ";
     setCookie('date', new Date().getTime());
 }
 
 registrationButton.addEventListener('click', (event) => {
     setCookie('name', nameCookie.value);
-    welcomeText.innerHTML = "Привет, " + getCookie('name');
+    welcomeText.innerHTML = "РџСЂРёРІРµС‚, " + getCookie('name');
 })
 
 clearButton.addEventListener('click', (event) => {
     setCookie('count', 0);
-    countText.innerHTML = "Вы ещё не были на этой странице";
+    countText.innerHTML = "Р’С‹ РµС‰С‘ РЅРµ Р±С‹Р»Рё РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ";
 })
