@@ -48,8 +48,7 @@
         count = 0
     }
 
-    setCookie('count', ++count);
-    countText.innerHTML = "Вы были на этой странице: " + getCookie('count') + " раз";
+
 
     if (getCookie('date') === undefined) {
         setCookie('date', new Date().getTime());
@@ -83,6 +82,9 @@
     else {
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
+
+    setCookie('count', ++count);
+    countText.innerHTML = "Вы были на этой странице: " + getCookie('count') + " раз";
 </script>
     <style>
         html, body {
