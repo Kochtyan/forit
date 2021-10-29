@@ -41,12 +41,7 @@
     const registrationButton = document.querySelector('#registrationButton');
     const clearButton = document.querySelector('#clearButton');
 
-    if (getCookie('name') === undefined) {
-        welcomeText.innerHTML = "Зарегистрируйтесь";
-    }
-    else {
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
-    }
+
 
     let count = getCookie('count');
     if (count === undefined) {
@@ -82,6 +77,12 @@
         setCookie('count', 0);
         countText.innerHTML = "Вы ещё не были на этой странице";
     })
+    if (getCookie('name') === undefined) {
+        welcomeText.innerHTML = "Зарегистрируйтесь";
+    }
+    else {
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
 </script>
     <style>
         html, body {
