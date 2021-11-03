@@ -69,9 +69,18 @@ else {
     setCookie('date', new Date().getTime());
 }
 
+let n = undefined;
+let arr = new Array();
+let arr = ["Иван", "Кирилл", "Олег"];
 registrationButton.addEventListener('click', (event) => {
-    setCookie('name', nameCookie.value);
-    welcomeText.innerHTML = "Привет, " + getCookie('name');
+    if (nameCookie.value == arr[1]) {
+        setCookie('name', nameCookie.value);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
+    else {
+        setCookie('name', n);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
 })
 
 clearButton.addEventListener('click', (event) => {
@@ -80,7 +89,7 @@ clearButton.addEventListener('click', (event) => {
 })
 let selecter = document.getElementById('nameCookie2')
 registrationButton2.addEventListener('click', (event) => {
-    let n = undefined;
+
     let selectedind = selecter.selectedIndex;
     let selectedtext = selecter.options[selecter.selectedIndex].text;
     if (selectedind != 0) {
@@ -92,3 +101,6 @@ registrationButton2.addEventListener('click', (event) => {
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
 })
+
+
+
