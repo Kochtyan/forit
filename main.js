@@ -77,9 +77,9 @@ clearButton.addEventListener('click', (event) => {
     setCookie('count', 0);
     countText.innerHTML = "Вы ещё не были на этой странице";
 })
-
+let select= document.nameCookie
 registrationButton2.addEventListener('click', (event) => {
-    var selectedIndex = nameCookie.options.selectedIndex;
+    var selectedIndex = select.options.selectedIndex;
     setCookie('name', nameCookie.options[selectedIndex]);
     welcomeText.innerHTML = "Привет, " + getCookie('name');
 })
