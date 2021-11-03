@@ -33,6 +33,7 @@ const welcomeText = document.querySelector('#welcomeText');
 const countText = document.querySelector('#countText');
 const dateText = document.querySelector('#dateText');
 const nameCookie = document.querySelector('#nameCookie');
+const nameCookie2 = document.querySelector('#nameCookie2');
 const registrationButton = document.querySelector('#registrationButton');
 const clearButton = document.querySelector('#clearButton');
 
@@ -77,7 +78,7 @@ clearButton.addEventListener('click', (event) => {
     setCookie('count', 0);
     countText.innerHTML = "Вы ещё не были на этой странице";
 })
-let selecter = document.getElementById('nameCookie')
+let selecter = document.getElementById('nameCookie2')
 registrationButton2.addEventListener('click', (event) => {
 
     let selectedInd = selecter.selectedIndex;
