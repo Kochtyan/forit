@@ -81,6 +81,6 @@ let selecter = document.getElementById('nameCookie')
 registrationButton2.addEventListener('click', (event) => {
 
     let selectedInd = selecter.selectedIndex;
-    setCookie('name', nameCookie.options[selectedInd]);
+    setCookie('name', selectedInd);
     welcomeText.innerHTML = "Привет, " + getCookie('name');
 })
