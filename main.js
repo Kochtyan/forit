@@ -70,7 +70,6 @@ else {
 }
 
 let n = undefined;
-let arr = new Array();
 let arr = ["Иван", "Кирилл", "Олег"];
 registrationButton.addEventListener('click', (event) => {
     if (nameCookie.value == arr[1]) {
