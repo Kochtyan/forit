@@ -79,6 +79,7 @@ clearButton.addEventListener('click', (event) => {
 })
 
 registrationButton2.addEventListener('click', (event) => {
-    setCookie('name', nameCookie.options.selectedIndex);
+    var selectedIndex = nameCookie.options.selectedIndex;
+    setCookie('name', nameCookie.options[selectedIndex]);
     welcomeText.innerHTML = "Привет, " + getCookie('name');
 })
