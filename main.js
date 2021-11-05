@@ -72,7 +72,23 @@ else {
 let n = undefined;
 let arr = ["Иван", "Кирилл", "Олег"];
 registrationButton.addEventListener('click', (event) => {
+    if (nameCookie.value == arr[0]) {
+        setCookie('name', nameCookie.value);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
+    else {
+        setCookie('name', n);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
     if (nameCookie.value == arr[1]) {
+        setCookie('name', nameCookie.value);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
+    else {
+        setCookie('name', n);
+        welcomeText.innerHTML = "Привет, " + getCookie('name');
+    }
+    if (nameCookie.value == arr[3]) {
         setCookie('name', nameCookie.value);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
