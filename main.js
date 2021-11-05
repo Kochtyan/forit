@@ -88,7 +88,7 @@ registrationButton.addEventListener('click', (event) => {
         setCookie('name', n);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
-    if (nameCookie.value == arr[3]) {
+    if (nameCookie.value == arr[2]) {
         setCookie('name', nameCookie.value);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
