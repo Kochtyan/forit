@@ -69,6 +69,7 @@ else {
     setCookie('date', new Date().getTime());
 }
 
+
 let n = undefined;
 let arr = ["Иван", "Кирилл", "Олег"];
 registrationButton.addEventListener('click', (event) => {
@@ -76,26 +77,19 @@ registrationButton.addEventListener('click', (event) => {
         setCookie('name', nameCookie.value);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
-    else {
-        setCookie('name', n);
+    else if (nameCookie.value == arr[1]) {
+        setCookie('name', nameCookie.value);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
-    if (nameCookie.value == arr[1]) {
+    else if (nameCookie.value == arr[2]) {
         setCookie('name', nameCookie.value);
         welcomeText.innerHTML = "Привет, " + getCookie('name');
     }
     else {
         setCookie('name', n);
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
+        welcomeText.innerHTML = "Недопустимое имя, " + getCookie('name');
     }
-    if (nameCookie.value == arr[2]) {
-        setCookie('name', nameCookie.value);
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
-    }
-    else {
-        setCookie('name', n);
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
-    }
+
 })
 
 clearButton.addEventListener('click', (event) => {
@@ -113,9 +107,6 @@ registrationButton2.addEventListener('click', (event) => {
     }
     else {
         setCookie('name', n);
-        welcomeText.innerHTML = "Привет, " + getCookie('name');
+        welcomeText.innerHTML = "Приветn, " + getCookie('name');
     }
 })
-
-
-
