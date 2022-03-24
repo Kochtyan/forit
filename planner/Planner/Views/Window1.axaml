@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="Planner.Views.Window1"
+        Title="Planner"
+		Height="450"
+		Width="450">
+
+	<Window.Styles>
+		
+		<Style Selector="Button.button1">
+			
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+			<Setter Property="HorizontalContentAlignment" Value="Center"/>
+			<Setter Property="VerticalContentAlignment" Value="Center"/>
+			
+		</Style>
+		
+	</Window.Styles>
+
+
+	<Grid ColumnDefinitions="*" RowDefinitions="50,300,*,*">
+		
+		<TextBox Watermark="Введите название заметки" Name="header" Grid.Column="0" Grid.Row="0"></TextBox>
+		<TextBox Watermark="Введите текст заметки" Name="description" TextWrapping="Wrap" Grid.Column="0" Grid.Row="1"></TextBox>
+		<Button Classes="button1" Grid.Column="0" Grid.Row="2">Ok</Button>
+		<Button Classes="button1" Click="closeButton_Click" Grid.Column="0" Grid.Row="3">Cancel</Button>
+		
+	</Grid>
+		
+</Window>

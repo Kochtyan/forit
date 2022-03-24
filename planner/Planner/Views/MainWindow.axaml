@@ -1,0 +1,96 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Planner.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="Planner.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Planner"
+	    Height="450"
+	    Width="450">
+	
+		<Window.Styles>
+			
+		<Style Selector="Button.button">
+			
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Stretch"/>
+		
+		</Style>
+			
+		<Style Selector="TextBox.textbox">
+			
+			<Setter Property="FontSize" Value="16"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+
+		
+		</Style>
+			
+		<Style Selector="DatePicker.datepicker">
+			
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+
+		</Style>
+		
+		<Style Selector="Border.border">
+			
+			<Setter Property="BorderThickness" Value="1"/>
+			<Setter Property="BorderBrush" Value="LightBlue"/>
+		
+		</Style>
+		
+		<Style Selector="ScrollViewer.scrollviewer">
+			
+			<Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+		
+		</Style>
+		
+			</Window.Styles>
+	
+	
+<Grid ColumnDefinitions="320,*,*" RowDefinitions="*,*,*,*,*,*,*,*,*">
+	
+<DatePicker Classes="datepicker" Name="datepicker1" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+
+<Border Classes="border" Grid.Column="0" Grid.Row="1"/> <ScrollViewer Grid.Column="0" Grid.Row="1" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="1">Заголовок дела 1</TextBlock>
+<Button Classes="button" Click="openNote" Grid.Column="1" Grid.Row="1"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="1"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+	
+<Border Classes="border" Grid.Column="0" Grid.Row="2"/> <ScrollViewer Grid.Column="0" Grid.Row="2" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="2">Заголовок дела 2</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="2"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="2"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+	
+<Border Classes="border" Grid.Column="0" Grid.Row="3"/> <ScrollViewer Grid.Column="0" Grid.Row="3" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="3">Заголовок дела 3</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="3"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="3"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+	
+<Border Classes="border" Grid.Column="0" Grid.Row="4"/> <ScrollViewer Grid.Column="0" Grid.Row="4" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="4">Заголовок дела 4</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="4"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="4"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+
+<Border Classes="border" Grid.Column="0" Grid.Row="5"/> <ScrollViewer Grid.Column="0" Grid.Row="5" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="5">Заголовок дела 5</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="5"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="5"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+
+<Border Classes="border" Grid.Column="0" Grid.Row="6"/> <ScrollViewer Grid.Column="0" Grid.Row="6" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="6">Заголовок дела 6</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="6"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="6"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+
+<Border Classes="border" Grid.Column="0" Grid.Row="7"/> <ScrollViewer Grid.Column="0" Grid.Row="7" Classes="scrollviewer"/>
+<TextBlock Classes="textbox" Margin="10,0,0,0" Grid.Column="0" Grid.Row="7">Заголовок дела 7</TextBlock>
+<Button Classes="button" Grid.Column="1" Grid.Row="7"><Image Source="D:\projects\Planner\Planner\Assets\in_zoom.ico"/></Button>
+<Button Classes="button" Grid.Column="2" Grid.Row="7"><Image Source="D:\projects\Planner\Planner\Assets\trash.ico"/></Button>
+
+<Button Classes="button"  Click="openNewNote"  Grid.Column="0" Grid.Row="8" Grid.ColumnSpan="3"><Image Source="D:\projects\Planner\Planner\Assets\add.ico"/></Button>
+
+</Grid>
+
+</Window>
